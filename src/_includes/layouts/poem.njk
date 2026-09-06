@@ -13,6 +13,7 @@ ogType: article
 <article class="poem" itemscope itemtype="https://schema.org/CreativeWork">
   <p class="poem-kicker">Kavita {{ (poems.length - i + 1) | num }}</p>
   <h2 class="poem-title" itemprop="name">{{ title }}</h2>
+  <div class="orn orn--poem"><span>&#10087;</span></div>
 
   <div class="poem-body" itemprop="text">
     {{ content | safe }}
