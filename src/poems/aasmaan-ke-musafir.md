@@ -1,6 +1,6 @@
 ---
 title: Aasmaan Ke Musafir
-date: 2026-09-06
+date: 2026-06-04
 draft: false
 ---
 Aaj phir aasmaan mein kuch baadal dheere-dheere aaye
