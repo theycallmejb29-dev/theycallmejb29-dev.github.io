@@ -1,0 +1,23 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ "/" | url | absolute(meta.url) }}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>{{ "/kavi/" | url | absolute(meta.url) }}</loc>
+    <changefreq>yearly</changefreq>
+  </url>
+  {%- for p in collections.poems %}
+  <url>
+    <loc>{{ p.url | url | absolute(meta.url) }}</loc>
+    <lastmod>{{ p.date | isoDate }}</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+  {%- endfor %}
+</urlset>

@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+compactHeader: true
+ogType: article
+---
+{%- set poems = collections.poems -%}
+{%- set i = poems | indexIn(page.url) -%}
+{%- set older = poems | neighbour(page.url, 1) -%}
+{%- set newer = poems | neighbour(page.url, -1) -%}
+
+<a class="back" href="{{ '/' | url }}">&larr; Sab nazmein</a>
+
+<article class="poem" itemscope itemtype="https://schema.org/CreativeWork">
+  <p class="poem-kicker">Nazm {{ (poems.length - i + 1) | num }}</p>
+  <h2 class="poem-title" itemprop="name">{{ title }}</h2>
+
+  <div class="poem-body" itemprop="text">
+    {{ content | safe }}
+  </div>
+
+  {% if note %}<p class="poem-note">{{ note }}</p>{% endif %}
+
+  <div class="poem-foot">
+    <p class="poem-sign" itemprop="author">&mdash; {{ site.author }}</p>
+    <p class="poem-meta"><time itemprop="datePublished" datetime="{{ page.date | isoDate }}">{{ page.date | readable }}</time></p>
+  </div>
+</article>
+
+<nav class="nav-pair" aria-label="Doosri nazmein">
+  <span>{% if older %}<a href="{{ older.url | url }}">&larr; {{ older.data.title }}</a>{% endif %}</span>
+  <span>{% if newer %}<a href="{{ newer.url | url }}">{{ newer.data.title }} &rarr;</a>{% endif %}</span>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ title | dump | safe }},
+  "headline": {{ title | dump | safe }},
+  "inLanguage": "hi-Latn",
+  "genre": "Poetry",
+  "datePublished": "{{ page.date | isoDate }}",
+  "author": { "@type": "Person", "name": {{ site.author | dump | safe }} },
+  "url": {{ (page.url | url | absolute(meta.url)) | dump | safe }},
+  "isPartOf": { "@type": "WebSite", "name": {{ site.title | dump | safe }}, "url": {{ meta.url | dump | safe }} }
+}
+</script>

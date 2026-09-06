@@ -1,0 +1,15 @@
+{
+  "name": "kavi-kehna-chahte-hain",
+  "version": "1.0.0",
+  "description": "Nazmein by JB",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "luxon": "^3.5.0"
+  }
+}

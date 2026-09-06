@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+<section class="index">
+  <div class="section-head">
+    <h2>Sab nazmein</h2>
+    <p>{% if collections.poems.length == 1 %}1 nazm{% else %}{{ collections.poems.length }} nazmein{% endif %}</p>
+  </div>
+
+  {% if collections.poems.length %}
+    <ul class="entries">
+      {% for p in collections.poems %}
+        <li>
+          <a class="entry" href="{{ p.url | url }}">
+            <span class="num">{{ (collections.poems.length - loop.index + 1) | num }}</span>
+            <span class="entry-main">
+              <span class="entry-title">{{ p.data.title }}</span>
+              <span class="entry-preview">{{ p.templateContent | opening }}</span>
+            </span>
+            <span class="entry-date">{{ p.date | readable }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="empty">Abhi tak koi nazm nahin.</p>
+  {% endif %}
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | dump | safe }},
+  "url": {{ meta.url | dump | safe }},
+  "description": {{ site.description | dump | safe }},
+  "inLanguage": "hi-Latn",
+  "author": { "@type": "Person", "name": {{ site.author | dump | safe }} }
+}
+</script>

@@ -1,0 +1,66 @@
+media:
+  input: src/assets/uploads
+  output: /assets/uploads
+
+content:
+  - name: poems
+    label: Nazmein
+    type: collection
+    path: src/poems
+    filename: '{fields.title}.md'
+    exclude:
+      - poems.11tydata.js
+    view:
+      fields: [title, date, draft]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Unwaan (title)
+        type: string
+        required: true
+      - name: date
+        label: Taareekh
+        type: date
+        default: now
+        options:
+          format: yyyy-MM-dd
+      - name: note
+        label: Ek line ka note (optional)
+        type: string
+      - name: draft
+        label: Draft — site par nahin dikhegi
+        type: boolean
+        default: false
+      - name: body
+        label: Nazm
+        type: text
+        required: true
+        options:
+          rows: 18
+
+  - name: settings
+    label: Site settings
+    type: file
+    path: src/_data/site.json
+    fields:
+      - name: title
+        label: Site ka naam
+        type: string
+      - name: tagline
+        label: Tagline
+        type: string
+      - name: description
+        label: Google ke liye description
+        type: text
+      - name: author
+        label: Kavi ka naam
+        type: string
+      - name: url
+        label: Site ka address (https://...)
+        type: string
+      - name: instagram
+        label: Instagram handle
+        type: string

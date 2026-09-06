@@ -1,0 +1,23 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }}</title>
+    <link>{{ meta.url }}</link>
+    <description>{{ site.description }}</description>
+    <language>hi</language>
+    <atom:link href="{{ '/feed.xml' | url | absolute(meta.url) }}" rel="self" type="application/rss+xml"/>
+    {%- for p in collections.poems %}
+    <item>
+      <title>{{ p.data.title }}</title>
+      <link>{{ p.url | url | absolute(meta.url) }}</link>
+      <guid isPermaLink="true">{{ p.url | url | absolute(meta.url) }}</guid>
+      <pubDate>{{ p.date | rfc822 }}</pubDate>
+      <description><![CDATA[ {{ p.templateContent | safe }} ]]></description>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

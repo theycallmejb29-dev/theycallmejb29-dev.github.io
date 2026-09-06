@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="hi-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if pageTitle %}{{ pageTitle }} — {{ site.title }}{% else %}{{ site.title }} — Nazmein by {{ site.author }}{% endif %}</title>
+<meta name="description" content="{{ pageDescription or site.description }}">
+<meta name="author" content="{{ site.author }}">
+<link rel="canonical" href="{{ page.url | url | absolute(meta.url) }}">
+
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ pageTitle or site.title }}">
+<meta property="og:description" content="{{ pageDescription or site.description }}">
+<meta property="og:url" content="{{ page.url | url | absolute(meta.url) }}">
+<meta name="twitter:card" content="summary">
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Karla:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
+<link rel="icon" href="{{ '/assets/favicon.svg' | url }}" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Content par jaayein</a>
+
+<div class="page">
+  <header class="masthead {{ 'masthead--compact' if compactHeader }}">
+    <p class="eyebrow">Nazm · Ghazal · Kavita</p>
+    <h1 class="wordmark"><a href="{{ '/' | url }}">Kavi <em>Kehna</em> Chahte Hain</a></h1>
+    <div class="orn"><span>&#10087;</span></div>
+    {% if not compactHeader %}
+      <p class="tagline">{{ site.tagline }}</p>
+      <p class="sig">&mdash; {{ site.author }}</p>
+    {% endif %}
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="colophon">
+    <span>{{ site.title }} &middot; sab nazmein {{ site.author }} ki</span>
+    <span class="colophon-links">
+      <a href="{{ '/' | url }}">Nazmein</a>
+      <a href="{{ '/kavi/' | url }}">Kavi</a>
+      <a href="{{ '/feed.xml' | url }}">RSS</a>
+      {% if site.instagram %}<a href="https://instagram.com/{{ site.instagram }}" rel="me noopener">Instagram</a>{% endif %}
+    </span>
+  </footer>
+</div>
+</body>
+</html>
