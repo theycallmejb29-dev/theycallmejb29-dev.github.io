@@ -74,29 +74,6 @@ a{color:inherit}
 .tagline{margin:0; max-width:31rem; color:var(--ink-soft); font-style:italic; font-size:1.02rem; text-wrap:balance}
 .sig{margin:.2rem 0 0; font-family:var(--display); font-style:italic; font-size:1.3rem}
 
-/* ---------- new post strip ---------- */
-.newpost{
-  display:grid; grid-template-columns:1fr auto; align-items:center; gap:.15rem 1rem;
-  margin-bottom:2.4rem; padding:.85rem 1.1rem;
-  border:1px solid var(--line-strong); border-left:3px solid var(--gold);
-  text-decoration:none; color:inherit; background:var(--paper-raised);
-}
-.newpost:hover{border-color:var(--accent); border-left-color:var(--gold)}
-.newpost:hover .newpost-go{transform:translateX(3px); color:var(--accent)}
-.newpost-flag{
-  grid-column:1; font-family:var(--util); font-size:.62rem; font-weight:600;
-  letter-spacing:.22em; text-transform:uppercase; color:var(--gold);
-}
-.newpost-title{
-  grid-column:1; font-family:var(--display); font-size:1.15rem; line-height:1.25;
-  letter-spacing:-.01em;
-}
-.newpost-go{
-  grid-column:2; grid-row:1 / span 2; font-size:1.1rem; color:var(--ink-faint);
-  transition:transform .15s ease, color .15s ease;
-}
-@media (prefers-reduced-motion: reduce){.newpost-go{transition:none}}
-
 /* ---------- index ---------- */
 .section-head{
   display:flex; align-items:baseline; justify-content:space-between; gap:1rem;

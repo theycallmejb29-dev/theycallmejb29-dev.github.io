@@ -67,8 +67,3 @@ content:
       - name: instagram_poetry
         label: Instagram handle (kavitaien)
         type: string
-      - name: latest_post_url
-        label: Nayi post ka Instagram link (khaali chhodne par box nahin dikhega)
-        type: string
-      - name: latest_post_title
-        label: Nayi post ka naam
