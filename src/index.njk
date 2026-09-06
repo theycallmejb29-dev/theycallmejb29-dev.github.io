@@ -4,8 +4,8 @@ permalink: /
 ---
 <section class="index">
   <div class="section-head">
-    <h2>Sab nazmein</h2>
-    <p>{% if collections.poems.length == 1 %}1 nazm{% else %}{{ collections.poems.length }} nazmein{% endif %}</p>
+    <h2>Sab kavitaien</h2>
+    <p>{% if collections.poems.length == 1 %}1 kavita{% else %}{{ collections.poems.length }} kavitaien{% endif %}</p>
   </div>
 
   {% if collections.poems.length %}
@@ -24,7 +24,7 @@ permalink: /
       {% endfor %}
     </ul>
   {% else %}
-    <p class="empty">Abhi tak koi nazm nahin.</p>
+    <p class="empty">Abhi tak koi kavita nahin.</p>
   {% endif %}
 </section>
 

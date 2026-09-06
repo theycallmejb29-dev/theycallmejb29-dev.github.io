@@ -8,10 +8,10 @@ ogType: article
 {%- set older = poems | neighbour(page.url, 1) -%}
 {%- set newer = poems | neighbour(page.url, -1) -%}
 
-<a class="back" href="{{ '/' | url }}">&larr; Sab nazmein</a>
+<a class="back" href="{{ '/' | url }}">&larr; Sab kavitaien</a>
 
 <article class="poem" itemscope itemtype="https://schema.org/CreativeWork">
-  <p class="poem-kicker">Nazm {{ (poems.length - i + 1) | num }}</p>
+  <p class="poem-kicker">Kavita {{ (poems.length - i + 1) | num }}</p>
   <h2 class="poem-title" itemprop="name">{{ title }}</h2>
 
   <div class="poem-body" itemprop="text">
@@ -26,7 +26,7 @@ ogType: article
   </div>
 </article>
 
-<nav class="nav-pair" aria-label="Doosri nazmein">
+<nav class="nav-pair" aria-label="Doosri kavitaien">
   <span>{% if older %}<a href="{{ older.url | url }}">&larr; {{ older.data.title }}</a>{% endif %}</span>
   <span>{% if newer %}<a href="{{ newer.url | url }}">{{ newer.data.title }} &rarr;</a>{% endif %}</span>
 </nav>

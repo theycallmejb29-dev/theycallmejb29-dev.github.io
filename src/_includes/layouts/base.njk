@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% if pageTitle %}{{ pageTitle }} — {{ site.title }}{% else %}{{ site.title }} — Nazmein by {{ site.author }}{% endif %}</title>
+<title>{% if pageTitle %}{{ pageTitle }} — {{ site.title }}{% else %}{{ site.title }} — Kavitaien by {{ site.author }}{% endif %}</title>
 <meta name="description" content="{{ pageDescription or site.description }}">
 <meta name="author" content="{{ site.author }}">
 <link rel="canonical" href="{{ page.url | url | absolute(meta.url) }}">
@@ -26,7 +26,7 @@
 
 <div class="page">
   <header class="masthead {{ 'masthead--compact' if compactHeader }}">
-    <p class="eyebrow">Nazm · Ghazal · Kavita</p>
+    <p class="eyebrow">Kavita · Ghazal · Shayari</p>
     <h1 class="wordmark"><a href="{{ '/' | url }}">Kavi <em>Kehna</em> Chahte Hain</a></h1>
     <div class="orn"><span>&#10087;</span></div>
     {% if not compactHeader %}
@@ -40,9 +40,9 @@
   </main>
 
   <footer class="colophon">
-    <span>{{ site.title }} &middot; sab kavitain {{ site.author }} ki</span>
+    <span>{{ site.title }} &middot; sab kavitaien {{ site.author }} ki</span>
     <span class="colophon-links">
-      <a href="{{ '/' | url }}">Nazmein</a>
+      <a href="{{ '/' | url }}">Kavitaien</a>
       <a href="{{ '/kavi/' | url }}">Kavi</a>
       {% if site.instagram %}<a href="https://instagram.com/{{ site.instagram }}" rel="me noopener">Instagram</a>{% endif %}
     </span>

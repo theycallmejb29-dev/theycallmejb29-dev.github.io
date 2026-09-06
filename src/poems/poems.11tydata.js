@@ -10,12 +10,12 @@ function firstLines(raw, n) {
 export default {
   layout: "layouts/poem.njk",
   tags: "poems",
-  permalink: "/nazm/{{ page.fileSlug | slugify }}/",
+  permalink: "/kavita/{{ page.fileSlug | slugify }}/",
   eleventyComputed: {
     pageTitle: (data) => data.title,
     pageDescription: (data) => {
       const open = firstLines(data.page && data.page.rawInput, 2);
-      return open ? `${open} — ek nazm ${data.site.author} ki.` : data.site.description;
+      return open ? `${open} — ek kavita ${data.site.author} ki.` : data.site.description;
     },
   },
 };

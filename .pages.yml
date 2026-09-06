@@ -4,7 +4,7 @@ media:
 
 content:
   - name: poems
-    label: Nazmein
+    label: Kavitaien
     type: collection
     path: src/poems
     filename: '{fields.title}.md'
@@ -35,7 +35,7 @@ content:
         type: boolean
         default: false
       - name: body
-        label: Nazm
+        label: Kavita
         type: text
         required: true
         options:
