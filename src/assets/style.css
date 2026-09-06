@@ -150,6 +150,19 @@ a{color:inherit}
 .prose p{margin:0 0 1.4rem}
 .prose-meta{font-size:.95rem; color:var(--ink-soft)}
 
+.insta{
+  display:inline-flex; flex-direction:column; gap:.15rem; margin-top:1.6rem;
+  padding:.75rem 1.4rem .8rem; border:1px solid var(--line-strong);
+  text-decoration:none; color:inherit;
+}
+.insta:hover{border-color:var(--accent)}
+.insta:hover .insta-handle{color:var(--accent)}
+.insta-label{
+  font-family:var(--util); font-size:.64rem; font-weight:600; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--ink-faint);
+}
+.insta-handle{font-family:var(--display); font-size:1.25rem; letter-spacing:-.01em}
+
 /* ---------- footer ---------- */
 .colophon{
   margin-top:4rem; padding-top:1.2rem; border-top:1px solid var(--line);
