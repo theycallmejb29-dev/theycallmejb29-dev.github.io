@@ -44,7 +44,8 @@
     <span class="colophon-links">
       <a href="{{ '/' | url }}">Kavitaien</a>
       <a href="{{ '/kavi/' | url }}">Kavi</a>
-      {% if site.instagram %}<a href="https://instagram.com/{{ site.instagram }}" rel="me noopener">Instagram</a>{% endif %}
+      {% set footerInsta = site.instagram_poetry or site.instagram %}
+      {% if footerInsta %}<a href="https://instagram.com/{{ footerInsta }}" rel="me noopener" target="_blank">Instagram</a>{% endif %}
     </span>
   </footer>
 </div>
