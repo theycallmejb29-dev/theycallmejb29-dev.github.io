@@ -15,7 +15,6 @@
 <meta property="og:url" content="{{ page.url | url | absolute(meta.url) }}">
 <meta name="twitter:card" content="summary">
 
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Karla:wght@400;500;600&display=swap">
@@ -41,11 +40,10 @@
   </main>
 
   <footer class="colophon">
-    <span>{{ site.title }} &middot; sab nazmein {{ site.author }} ki</span>
+    <span>{{ site.title }} &middot; sab kavitain {{ site.author }} ki</span>
     <span class="colophon-links">
       <a href="{{ '/' | url }}">Nazmein</a>
       <a href="{{ '/kavi/' | url }}">Kavi</a>
-      <a href="{{ '/feed.xml' | url }}">RSS</a>
       {% if site.instagram %}<a href="https://instagram.com/{{ site.instagram }}" rel="me noopener">Instagram</a>{% endif %}
     </span>
   </footer>
