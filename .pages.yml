@@ -62,5 +62,8 @@ content:
         label: Site ka address (https://...)
         type: string
       - name: instagram
-        label: Instagram handle
+        label: Instagram handle (personal)
+        type: string
+      - name: instagram_poetry
+        label: Instagram handle (kavitaien)
         type: string

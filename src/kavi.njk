@@ -3,27 +3,24 @@ layout: layouts/base.njk
 permalink: /kavi/
 compactHeader: true
 pageTitle: Kavi
-pageDescription: Kuch lafz kahe nahi jaate, bas andar kahin zinda reh jaate hain. Yeh jagah unhi lafzon ka ghar hai — JB ki kavitaien.
+pageDescription: Kavi bahut kuch kehte hain. JB ko janne ke liye unka Instagram, aur unki kavitaien.
 ---
 <a class="back" href="{{ '/' | url }}">&larr; Sab kavitaien</a>
 
 <article class="prose">
-  <h2 class="page-title">Yeh jagah</h2>
+  <h2 class="page-title">Kavi bahut kuch kehte hain</h2>
 
-  <p>Kuch lafz kahe nahi jaate, bas andar kahin zinda reh jaate hain.</p>
+  <div class="insta-pair">
+    <a class="insta" href="https://instagram.com/{{ site.instagram }}" rel="me noopener" target="_blank">
+      <span class="insta-label">Kavi ko janne ke liye</span>
+      <span class="insta-handle">@{{ site.instagram }}</span>
+    </a>
 
-  <p>Yeh jagah unhi lafzon ka ghar hai — jo dil mein rehkar bhi sukoon nahi lene dete.</p>
-
-  <p>Yahan kavita likhi nahi jaati, nikali jaati hai. Jo tum keh nahi paaye, shayad kisi aur ne likh diya ho.</p>
-
-  <p>Kavi kehna chahte hain ki har dil mein ek kavita adhuri hai.</p>
-
-  <p class="prose-meta">
-    Likhta hoon <strong>JB</strong> ke naam se. Kavitaien Hindi-Urdu mein banti hain aur Roman script mein utarti hain.
-  </p>
-
-  <a class="insta" href="https://instagram.com/{{ site.instagram }}" rel="me noopener" target="_blank">
-    <span class="insta-label">Instagram par</span>
-    <span class="insta-handle">@{{ site.instagram }}</span>
-  </a>
+    {% if site.instagram_poetry %}
+    <a class="insta" href="https://instagram.com/{{ site.instagram_poetry }}" rel="me noopener" target="_blank">
+      <span class="insta-label">Aur kavi ki kavitaien</span>
+      <span class="insta-handle">@{{ site.instagram_poetry }}</span>
+    </a>
+    {% endif %}
+  </div>
 </article>

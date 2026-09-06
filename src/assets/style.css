@@ -150,8 +150,9 @@ a{color:inherit}
 .prose p{margin:0 0 1.4rem}
 .prose-meta{font-size:.95rem; color:var(--ink-soft)}
 
+.insta-pair{display:flex; flex-wrap:wrap; gap:.9rem; margin-top:2rem}
 .insta{
-  display:inline-flex; flex-direction:column; gap:.15rem; margin-top:1.6rem;
+  display:inline-flex; flex-direction:column; gap:.15rem;
   padding:.75rem 1.4rem .8rem; border:1px solid var(--line-strong);
   text-decoration:none; color:inherit;
 }
