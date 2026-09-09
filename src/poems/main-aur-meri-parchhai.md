@@ -1,6 +1,6 @@
 ---
 title: Main Aur Meri Parchhai
-date: 2026-09-09
+date: 2024-08-23
 draft: false
 ---
 Main aur meri parchhai, do saathi anjaane,
