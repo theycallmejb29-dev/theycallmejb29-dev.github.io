@@ -8,8 +8,8 @@
   --gold:#A8823F;
   --line:#DDD4C3;
   --line-strong:#C8BCA6;
-  --serif:"Spectral","Iowan Old Style",Georgia,serif;
-  --display:"Fraunces","Spectral",Georgia,serif;
+  --serif:"Spectral","Noto Serif Devanagari","Iowan Old Style",Georgia,serif;
+  --display:"Fraunces","Noto Serif Devanagari","Spectral",Georgia,serif;
   --util:"Karla","Helvetica Neue",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){
